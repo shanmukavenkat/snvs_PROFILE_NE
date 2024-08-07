@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+
+        .scrolling-container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .scrolling-inner {
+            display: flex;
+            gap: 1rem;
+            animation: scroll 20s linear infinite;
+        }
+
+        .scrolling-item {
+            flex: 0 0 auto;
+            background: #1a1a1a;
+            color: #B026FF;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+        .scrolling-item:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scrolling-container::after {
+            content: "";
+            flex: 0 0 250px;
+            width: 1rem;
+        }
+
+        .circular-img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-icon-1 {
+            background-color: white;
+            color: black;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+
+        .social-icon-1:hover {
+            background-color: #0072b1;
+            color: white;
+        }
+
+        .social-icon:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<body class="bg-black text-white">
+
+<!-- Header Section -->
+<header class="bg-gradient-to-r from-purple-700 to-indigo-900 text-white shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-4xl font-bold transition-transform transform hover:scale-105 text-[#B026FF]">S.N.V.S.KOMAL</h1>
+        <nav class="hidden md:flex">
+            <a href="#about" class="px-4 py-2 transition-transform transform hover:scale-105 text-[#B026FF]">About</a>
+            <a href="#skills" class="px-4 py-2 transition-transform transform hover:scale-105 text-[#B026FF]">Skills</a>
+            <a href="#education" class="px-4 py-2 transition-transform transform hover:scale-105 text-[#B026FF]">Education</a>
+            <a href="#projects" class="px-4 py-2 transition-transform transform hover:scale-105 text-[#B026FF]">Projects</a>
+            <a href="#contact" class="px-4 py-2 transition-transform transform hover:scale-105 text-[#B026FF]">Contact</a>
+        </nav>
+        <button id="menu-button" class="block md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="menu" class="hidden md:hidden">
+        <a href="#about" class="block px-4 py-2 text-[#B026FF]">About</a>
+        <a href="#skills" class="block px-4 py-2 text-[#B026FF]">Skills</a>
+        <a href="#education" class="block px-4 py-2 text-[#B026FF]">Education</a>
+        <a href="#projects" class="block px-4 py-2 text-[#B026FF]">Projects</a>
+        <a href="#contact" class="block px-4 py-2 text-[#B026FF]">Contact</a>
+    </div>
+</header>
+
+<!-- About Me Section -->
+<!-- About Me Section -->
+<section id="about"
+         class="container mx-auto px-6 py-20 fade-in flex flex-col md:flex-row items-center text-center md:text-left">
+    <div class="md:w-1/2">
+        <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">About Me</h2>
+        <p class="text-lg leading-relaxed text-[#B026FF]">
+
+            👋 Hello! I’m A.S.N.V.S.KOMAL, a full-stack developer who blends creativity with technology. From crafting dynamic websites 🌐 to diving deep into the realms of DevOps 🚀 and data science 📊, I’m passionate about exploring innovative solutions and making the web both beautiful and functional. Let’s create something amazing together! ✨
+
+               </p>
+        <div class="social-icons mt-4">
+            <a href="https://linkedin.com" target="_blank" class="social-icon-1">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+        <img src="new.jpg" alt="Profile Image" class="circular-img">
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Skills</h2>
+        <div class="scrolling-container">
+            <div class="scrolling-inner">
+                <div class="scrolling-item">HTML</div>
+                <div class="scrolling-item">CSS</div>
+                <div class="scrolling-item">Tailwind CSS</div>
+                <div class="scrolling-item">JavaScript</div>
+                <!-- Duplicate items to ensure seamless scrolling -->
+                <div class="scrolling-item">HTML</div>
+                <div class="scrolling-item">CSS</div>
+                <div class="scrolling-item">Tailwind CSS</div>
+                <div class="scrolling-item">JavaScript</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Education</h2>
+        <div class="scrolling-container">
+            <div class="scrolling-inner">
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
+                    <p class="text-white">need to be updated</p>
+                </div>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2">Master's Degree in Software Engineering</h3>
+                    <p class="text-white">need to be updated</p>
+                </div>
+                <!-- Duplicate items to ensure seamless scrolling -->
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
+                    <p class="text-white">need to be updated/p>
+                </div>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
+                    <p class="text-white">need to be updated</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Projects</h2>
+        <div class="scrolling-container">
+            <div class="scrolling-inner">
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 1</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 2</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 3</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+                <!-- Duplicate items to ensure seamless scrolling -->
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 1</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 2</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+                <div class="scrolling-item">
+                    <h3 class="text-2xl font-bold mb-2">Project 3</h3>
+                    <p class="text-[#B026FF]">Description of the project...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="container mx-auto px-6 py-20 fade-in">
+    <h2 class="text-4xl font-extrabold mb-8 text-white">Contact</h2>
+    <form id="contact-form" class="bg-white p-8 shadow-lg rounded-lg">
+        <div class="mb-6">
+            <label for="name" class="block text-lg font-medium text-gray-700">Name</label>
+            <input type="text" id="name" name="name" class="w-full p-3 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <div class="mb-6">
+            <label for="email" class="block text-lg font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 border  text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        </div>
+        <div class="mb-6">
+            <label for="message" class="block text-lg font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" class="w-full p-3 border text-gray-700 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="4" required placeholder="Please enter your email address 📧, name 👤 and your query 🧐 again! "></textarea>
+        </div>
+        <input type="submit" value="Send" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300">
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-black text-[#B026FF] py-6">
+    <div class="container mx-auto px-6 text-center">
+       <p>⏳ Time waits for no one. 🚀</p>
+    </div>
+</footer>
+
+<!-- EmailJS Script -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    emailjs.init('zNT8zRY_F6s_eUUt2'); // Replace with your actual EmailJS public key
+
+    window.onload = function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Use emailjs.sendForm() to send form data
+            emailjs.sendForm('service_001w5rn', 'template_gba8mtd', this) // Replace with your actual service ID and template ID
+                .then(function (response) {
+                    alert('Message sent successfully!');
+                    console.log('SUCCESS:', response);
+                    document.getElementById('contact-form').reset(); // Optionally reset the form
+                }, function (error) {
+                    alert('Failed to send message.');
+                    console.error('FAILED:', error);
+                });
+        });
+
+        document.getElementById('menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    }
+</script>
+</body>
+
+</html>
