@@ -306,6 +306,15 @@
         document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
+            // Get the input values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Prepend email and name to the message
+            var fullMessage = "Email: " + email + "\nName: " + name + "\n\nMessage: " + message;
+            document.getElementById('message').value = fullMessage;
+
             // Use emailjs.sendForm() to send form data
             emailjs.sendForm('service_001w5rn', 'template_gba8mtd', this) // Replace with your actual service ID and template ID
                 .then(function (response) {
@@ -328,6 +337,7 @@
         });
     }
 </script>
+
 
 </body>
 
