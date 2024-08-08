@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>SNVS Creative Tech Hub Innovate, Collaborate, and Connect</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -37,6 +37,7 @@
         .scrolling-inner {
             display: flex;
             gap: 1rem;
+            transition: transform 0.3s;
         }
 
         .scrolling-item {
@@ -46,12 +47,12 @@
             padding: 1.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s;
             overflow: hidden;
         }
 
         .scrolling-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.2);
         }
 
         .scroll-left .scrolling-inner {
@@ -215,28 +216,16 @@
 </section>
 
 <!-- Education Section -->
-<section id="education" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in scroll-right">
+<section id="education" class="py-20 fade-in scroll-right">
     <div class="container mx-auto px-6">
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Education</h2>
         <div class="scrolling-container">
             <div class="scrolling-inner">
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <!-- Duplicate items to ensure seamless scrolling -->
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
+                <div class="scrolling-item">Bachelor of Technology in Computer Science</div>
+                <div class="scrolling-item">Bachelor of Technology in Computer Science</div>
+                <div class="scrolling-item">Bachelor of Technology in Computer Science</div>
+                <div class="scrolling-item">Bachelor of Technology in Computer Science</div>
+                <div class="scrolling-item">Bachelor of Technology in Computer Science</div>
             </div>
         </div>
     </div>
@@ -248,31 +237,25 @@
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Projects</h2>
         <div class="scrolling-container">
             <div class="scrolling-inner">
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <!-- Duplicate items to ensure seamless scrolling -->
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
-                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
-                    <p class="text-lg text-[#B026FF]">need to be updated</p>
-                </div>
+                <div class="scrolling-item">Project 1: Task Management App</div>
+                <div class="scrolling-item">Project 2: Research Paper Repository</div>
+                <div class="scrolling-item">Project 3: Library Management System</div>
+                <div class="scrolling-item">Project 4: Grievance Redressal Portal</div>
+                <div class="scrolling-item">Project 5: AI Chatbot</div>
+                <div class="scrolling-item">Project 1: Task Management App</div>
+                <div class="scrolling-item">Project 2: Research Paper Repository</div>
+                <div class="scrolling-item">Project 3: Library Management System</div>
+                <div class="scrolling-item">Project 4: Grievance Redressal Portal</div>
+                <div class="scrolling-item">Project 5: AI Chatbot</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="container mx-auto px-6 py-20 fade-in">
-    <h2 class="text-4xl font-extrabold mb-8 text-white">Contact Me</h2>
+    <h2 class="text-4xl font-extra bold mb-8 text-white">Contact Me</h2>
     <form id="contact-form" class="bg-white p-8 shadow-lg rounded-lg">
         <div class="mb-6">
             <label for="name" class="block text-lg font-medium text-gray-700">Name</label>
@@ -335,10 +318,19 @@
                 menu.classList.add('hidden');
             }
         });
+
+
+        document.querySelectorAll('.scrolling-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.parentElement.style.animationPlayState = 'paused';
+            });
+
+            item.addEventListener('mouseleave', () => {
+                item.parentElement.style.animationPlayState = 'running';
+            });
+        });
     }
 </script>
-
-
 </body>
 
 </html>
