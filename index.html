@@ -37,7 +37,6 @@
         .scrolling-inner {
             display: flex;
             gap: 1rem;
-            animation: scroll 20s linear infinite;
         }
 
         .scrolling-item {
@@ -55,19 +54,30 @@
             transform: scale(1.05);
         }
 
-        @keyframes scroll {
+        .scroll-left .scrolling-inner {
+            animation: scroll-left 20s linear infinite;
+        }
+
+        @keyframes scroll-left {
             0% {
-                transform: translateX(0);
+                transform: translateX(100%);
             }
             100% {
                 transform: translateX(-100%);
             }
         }
 
-        .scrolling-container::after {
-            content: "";
-            flex: 0 0 250px;
-            width: 1rem;
+        .scroll-right .scrolling-inner {
+            animation: scroll-right 20s linear infinite;
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         .circular-img {
@@ -152,16 +162,12 @@
 </header>
 
 <!-- About Me Section -->
-<!-- About Me Section -->
-<section id="about"
-         class="container mx-auto px-6 py-20 fade-in flex flex-col md:flex-row items-center text-center md:text-left">
+<section id="about" class="container mx-auto px-6 py-20 fade-in flex flex-col md:flex-row items-center text-center md:text-left">
     <div class="md:w-1/2">
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">About Me</h2>
         <p class="text-lg leading-relaxed text-[#B026FF]">
-
             👋 Hello! I’m A.S.N.V.S.KOMAL, a full-stack developer who blends creativity with technology. From crafting dynamic websites 🌐 to diving deep into the realms of DevOps 🚀 and data science 📊, I’m passionate about exploring innovative solutions and making the web both beautiful and functional. Let’s create something amazing together! ✨
-
-               </p>
+        </p>
         <div class="social-icons mt-4">
             <a href="https://linkedin.com" target="_blank" class="social-icon-1">
                 <i class="fab fa-linkedin-in"></i>
@@ -179,9 +185,8 @@
     </div>
 </section>
 
-
 <!-- Skills Section -->
-<section id="skills" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+<section id="skills" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in scroll-left">
     <div class="container mx-auto px-6">
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Skills</h2>
         <div class="scrolling-container">
@@ -190,38 +195,47 @@
                 <div class="scrolling-item">CSS</div>
                 <div class="scrolling-item">Tailwind CSS</div>
                 <div class="scrolling-item">JavaScript</div>
-                <!-- Duplicate items to ensure seamless scrolling -->
+                <div class="scrolling-item">React</div>
+                <div class="scrolling-item">Node.js</div>
+                <div class="scrolling-item">Python</div>
+                <div class="scrolling-item">SQL</div>
+                <div class="scrolling-item">MongoDB</div>
                 <div class="scrolling-item">HTML</div>
                 <div class="scrolling-item">CSS</div>
                 <div class="scrolling-item">Tailwind CSS</div>
                 <div class="scrolling-item">JavaScript</div>
+                <div class="scrolling-item">React</div>
+                <div class="scrolling-item">Node.js</div>
+                <div class="scrolling-item">Python</div>
+                <div class="scrolling-item">SQL</div>
+                <div class="scrolling-item">MongoDB</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Education Section -->
-<section id="education" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+<section id="education" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in scroll-right">
     <div class="container mx-auto px-6">
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Education</h2>
         <div class="scrolling-container">
             <div class="scrolling-inner">
                 <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
-                    <p class="text-white">need to be updated</p>
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
                 <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2">Master's Degree in Software Engineering</h3>
-                    <p class="text-white">need to be updated</p>
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
                 <!-- Duplicate items to ensure seamless scrolling -->
                 <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
-                    <p class="text-white">need to be updated/p>
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
                 <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
-                    <h3 class="text-2xl font-bold mb-2">need to be updated</h3>
-                    <p class="text-white">need to be updated</p>
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
             </div>
         </div>
@@ -229,40 +243,33 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in">
+<section id="projects" class="bg-gradient-to-r from-purple-700 to-indigo-900 py-20 fade-in scroll-left">
     <div class="container mx-auto px-6">
         <h2 class="text-4xl font-extrabold mb-8 text-[#B026FF]">Projects</h2>
         <div class="scrolling-container">
             <div class="scrolling-inner">
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 1</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 2</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
-                </div>
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 3</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
                 <!-- Duplicate items to ensure seamless scrolling -->
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 1</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 2</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
-                </div>
-                <div class="scrolling-item">
-                    <h3 class="text-2xl font-bold mb-2">Project 3</h3>
-                    <p class="text-[#B026FF]">Description of the project...</p>
+                <div class="scrolling-item bg-black text-white p-4 rounded-lg shadow-md flex-shrink-0">
+                    <h3 class="text-2xl font-bold mb-2 text-[#B026FF]">need to be updated</h3>
+                    <p class="text-lg text-[#B026FF]">need to be updated</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <!-- Contact Section -->
 <section id="contact" class="container mx-auto px-6 py-20 fade-in">
     <h2 class="text-4xl font-extrabold mb-8 text-white">Contact</h2>
@@ -286,7 +293,7 @@
 <!-- Footer Section -->
 <footer class="bg-black text-[#B026FF] py-6">
     <div class="container mx-auto px-6 text-center">
-       <p>⏳ Time waits for no one. 🚀</p>
+        <p>⏳ Time waits for no one. 🚀</p>
     </div>
 </footer>
 
@@ -321,6 +328,7 @@
         });
     }
 </script>
+
 </body>
 
 </html>
