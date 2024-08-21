@@ -31,7 +31,6 @@
 
         .scrolling-container {
             display: flex;
-            overflow: hidden;
             white-space: nowrap;
             position: relative;
         }
@@ -296,20 +295,36 @@
             var email = document.getElementById('email').value;
             var message = document.getElementById('message').value;
 
-            // Prepend email and name to the message
-            var fullMessage = "Email: " + email + "\nName: " + name + "\n\nMessage: " + message;
-            document.getElementById('message').value = fullMessage;
+            // Function to send the email
+            function sendEmail(location = 'Location not available') {
+                var fullMessage = "Email: " + email + "\nName: " + name + "\nLocation: " + location + "\n\nMessage: " + message;
+                document.getElementById('message').value = fullMessage;
 
-            // Use emailjs.sendForm() to send form data
-            emailjs.sendForm('service_001w5rn', 'template_gba8mtd', this) // Replace with your actual service ID and template ID
-                .then(function (response) {
-                    alert('Message sent successfully!');
-                    console.log('SUCCESS:', response);
-                    document.getElementById('contact-form').reset(); // Optionally reset the form
+                // Use emailjs.sendForm() to send form data
+                emailjs.sendForm('service_001w5rn', 'template_gba8mtd', document.getElementById('contact-form')) // Replace with your actual service ID and template ID
+                    .then(function (response) {
+                        alert('Message sent successfully!');
+                        console.log('SUCCESS:', response);
+                        document.getElementById('contact-form').reset(); // Optionally reset the form
+                    }, function (error) {
+                        alert('Failed to send message.');
+                        console.error('FAILED:', error);
+                    });
+            }
+
+            // Get the client's location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var location = "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
+                    sendEmail(location);
                 }, function (error) {
-                    alert('Failed to send message.');
-                    console.error('FAILED:', error);
+                    console.warn("Geolocation failed: ", error.message);
+                    sendEmail();
                 });
+            } else {
+                console.warn("Geolocation is not supported by this browser.");
+                sendEmail();
+            }
         });
 
         document.getElementById('menu-button').addEventListener('click', function () {
@@ -320,7 +335,6 @@
                 menu.classList.add('hidden');
             }
         });
-
 
         document.querySelectorAll('.scrolling-item').forEach(item => {
             item.addEventListener('mouseover', () => {
@@ -333,6 +347,7 @@
         });
     }
 </script>
+
 </body>
 
 </html>
