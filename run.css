@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.images{
+    width:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.two{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
